@@ -63,3 +63,14 @@
 
 15. Explain the difference between the == and === operators.\
     `==` is a lose equality operator, which allows type conversion before checking. `===` is a strict equality operator which checks the equality without type conversion.
+
+17. If the function above is called with the following parameters `modifyArray([1,2,3], doSomething)`, what will be the result?\
+    The function will return the list `[ 2, 4, 6 ]`. This is because in every element of the array that is passed in (`[1,2,3]`), we push a updated version of it to the `newArr` via `doSomething`, which doubles the value. Therefore the `newArr` array will hold and return the doubled entires of `[1,2,3]`.
+
+19. What is the output of the above code?\
+    JS will print\
+    `1`\
+    `4`\
+    `3`\
+    `2`\
+    This is because `setTimeout` is an asynchronous function, so JS wil first run the synced part of the function, which is the `1` and `4` print statement. After that, it starts to process the `setTimeout` functions. Since `3` has `delay=0`, it will be executed first, at last will be the `4` which is delayed for 1 second.

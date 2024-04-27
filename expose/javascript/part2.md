@@ -44,28 +44,46 @@
         `student.courseLoad[0]`
 
 13. Arithmetic
-    -  '3' + 2  = `5`
-    - '3' - 2 = `1`
-    - 3 + null = `3`
-    - '3' + null = `'3null'`
-    - true + 3 = `4`
-    - false + null = `0`
-    - '3' + undefined = `'3undefined'`
-    - '3' - undefined = `NaN`
+    -  '3' + 2  = `32`\
+        `2` is mapped to a string.
+    - '3' - 2 = `1`\
+        `'3'` is mapped to an integer.
+    - 3 + null = `3`\
+        `null` is mapped to `0`.
+    - '3' + null = `'3null'`\
+        `null` is mapped to string `'null'`.
+    - true + 3 = `4`\
+        `true` is mapped to `1`.
+    - false + null = `0`\
+        `false` and `null` both mapped to `0`.
+    - '3' + undefined = `'3undefined'`\
+        `undefined` mapped to string `'undefined'`
+    - '3' - undefined = `NaN`\
+        `'3'` mapped to `3` and calculation resulted `NaN`.
 
 14. Comparison
-    - '2' > 1 = `true`
-    - '2' < '12' = `false`
-    - 2 == '2' = `true`
-    - 2 === '2' = `false`
-    - true == 2 = `false`
-    - true === Boolean(2) = `true`s
+    - '2' > 1 = `true`\
+        `'2'` mapped to integer `2`.
+    - '2' < '12' = `false`\
+        Both `'2'` and `'12'` are mapped to integers.
+    - 2 == '2' = `true`\
+        Lose check returns `true` because their values are the same.
+    - 2 === '2' = `false`\
+        Strict check returns `false` because their type differs.
+    - true == 2 = `false`\
+        `true` mapped to `1`.
+    - true === Boolean(2) = `true`s\
+        `Boolean(2)` returns `true`.
 
 15. Explain the difference between the == and === operators.\
     `==` is a lose equality operator, which allows type conversion before checking. `===` is a strict equality operator which checks the equality without type conversion.
 
+16. Code in `part2-question16.js`.
+
 17. If the function above is called with the following parameters `modifyArray([1,2,3], doSomething)`, what will be the result?\
     The function will return the list `[ 2, 4, 6 ]`. This is because in every element of the array that is passed in (`[1,2,3]`), we push a updated version of it to the `newArr` via `doSomething`, which doubles the value. Therefore the `newArr` array will hold and return the doubled entires of `[1,2,3]`.
+
+18. Code in `part2-question18.js`.
 
 19. What is the output of the above code?\
     JS will print\

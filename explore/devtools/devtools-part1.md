@@ -5,7 +5,7 @@
     `expose.js` at line `4`.
 
 3. What is its file size?\
-    11.7 MB.
+    779 kB transferred. 11.7 MB resources.
 
 4. How long did it take to download?\
     61 ms.

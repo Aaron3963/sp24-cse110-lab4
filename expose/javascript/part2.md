@@ -44,7 +44,7 @@
         `student.courseLoad[0]`
 
 13. Arithmetic
-    -  '3' + 2  = `32`\
+    -  '3' + 2  = `'32'`\
         `2` is mapped to a string.
     - '3' - 2 = `1`\
         `'3'` is mapped to an integer.
